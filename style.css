@@ -18,7 +18,6 @@ color:white;
 
 
 
-
 header{
 
 background:#020617;
@@ -77,6 +76,7 @@ display:none;
 
 
 
+/* Home Section */
 
 .home{
 
@@ -91,16 +91,29 @@ padding:0 10%;
 
 
 
+/* Profile Image Updated */
 
-.home-image img{
+.home-image{
 
 width:260px;
 height:260px;
 border-radius:50%;
-object-fit:cover;
+overflow:hidden;
 border:5px solid #38bdf8;
+flex-shrink:0;
 
 }
+
+
+.home-image img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+
+}
+
 
 
 
@@ -244,7 +257,6 @@ flex-wrap:wrap;
 
 
 
-
 .card{
 
 background:#1e293b;
@@ -253,7 +265,6 @@ width:300px;
 border-radius:15px;
 
 }
-
 
 
 
@@ -266,13 +277,13 @@ color:#38bdf8;
 
 
 
+
 .contact-box{
 
 text-align:center;
 line-height:2;
 
 }
-
 
 
 
@@ -298,6 +309,8 @@ text-align:center;
 
 
 
+
+/* Mobile Responsive */
 
 @media(max-width:700px){
 
@@ -333,6 +346,7 @@ display:block;
 
 
 
+
 .home{
 
 flex-direction:column;
@@ -344,7 +358,8 @@ padding-top:120px;
 
 
 
-.home-image img{
+
+.home-image{
 
 width:180px;
 height:180px;
@@ -352,8 +367,17 @@ height:180px;
 }
 
 
+
+
+.home-content h1{
+
+font-size:35px;
+
 }
 
+
+
+}
 
 
 
