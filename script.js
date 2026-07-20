@@ -1,3 +1,5 @@
+// Mobile Menu
+
 const menu = document.getElementById("menu");
 
 const navLinks = document.querySelector("nav ul");
@@ -5,16 +7,35 @@ const navLinks = document.querySelector("nav ul");
 
 menu.addEventListener("click",()=>{
 
-navLinks.classList.toggle("active");
+    navLinks.classList.toggle("active");
 
 });
 
 
 
 
-// Smooth scrolling
+// Close menu after clicking link
 
-document.querySelectorAll("a").forEach(link=>{
+document.querySelectorAll("nav ul li a")
+.forEach(link=>{
+
+
+link.addEventListener("click",()=>{
+
+    navLinks.classList.remove("active");
+
+});
+
+
+});
+
+
+
+
+// Smooth Scroll
+
+document.querySelectorAll("a")
+.forEach(link=>{
 
 
 link.addEventListener("click",(e)=>{
@@ -39,5 +60,26 @@ behavior:"smooth"
 
 });
 
+
+});
+
+
+
+
+// Button Hover Animation
+
+const button=document.querySelector(".btn");
+
+
+button.addEventListener("mouseover",()=>{
+
+button.style.transform="scale(1.1)";
+
+});
+
+
+button.addEventListener("mouseout",()=>{
+
+button.style.transform="scale(1)";
 
 });
